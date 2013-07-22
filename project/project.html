@@ -1,0 +1,112 @@
+<html>
+
+<style>
+MARQUEE{
+font-size:90px;
+color:Black;
+}
+
+div{
+float:left;
+margin-top:5mm;
+margin-left:.5mm;
+margin-right:5mm;
+margin-bottom:5mm;
+}
+#m{
+border:2px groove black;
+float:left;
+width:60%;
+margin-top:5mm;
+margin-left:.5mm;
+margin-right:5mm;
+margin-bottom:5mm;
+}
+
+body 
+{
+background-color:DarkOrange;
+border:1px solid black;
+} 
+
+a:link {color:black;}      
+a:hover {color:#FF00FF;}  
+a:active {color:#0000FF;} 
+
+form{
+border-style:groove;
+border-width:thick;
+background-color:LightBlue;
+border-color:black;
+color:red;
+margin-top:5mm;
+margin-left:.5mm;
+margin-right:5mm;
+margin-bottom:5mm;
+}
+
+</style>
+
+<body>
+<MARQUEE behavior="alternate" height="15%">MyCinemas</MARQUEE>
+<div>
+<form  action="http://localhost/w.php" id="Frm" name="myForms2" method="post">
+
+
+Username : <input type="text" name="uName"></input><br><br>
+
+
+Password : <input type="password" name="pwd"><br><br>
+
+<input type="submit" value="login"></input>
+
+<br><br>Not yet registered?<br> <a href="loginp.htm">Create an account</a> now.
+
+</form>
+</div>
+<div id="m" style="background-color:YellowGreen;">
+<p id="n">
+  Login to book your show.<br>
+  There are 6 screens.<br>
+  Free 3D goggles will be provided for 3D movies.<br>
+  
+<ol>Movies running now:
+<li>Singam II
+<li>World WarZ
+<li>Bhaag Milkha Bhaag
+<li>Raanjhanaa
+<li>Hangover Part III
+<li>The Iceman
+</ol>
+</p>
+</div>
+
+<div>
+<img onmouseover="ori();" border="0" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcQuTYH4qyt5Btyccq4UBQckosVOSbXABpuF50X3NiYMZmkgGl69">
+</div>
+<div>
+<img onmouseover="change();" src="https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSyWs6j5pGcdBNChljdU2ip5FJTq8Fs9-pjgF-KU4NAV3yrpcA2">
+</div>
+<div>
+<img onmouseover="change2();" src="https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcSN3ZfUhYOTPaNMcWvTULwmZMaj8Ylf-OMWXOMWqitDVJURWpoJnQ">
+</div>
+<script>
+
+function change()
+{
+document.getElementById("m").innerHTML="The Food Court is filled with well reputed Multi Cuisine restaurants.<br><div><img src=\"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcRc9L7jjRoSILM14SRQtNmNo7s672tELtA2ajdJvszdl2KXRK1Q\"></div><div><img src=\"https://encrypted-tbn1.gstatic.com/images?q=tbn:ANd9GcS_H2GieBfbdg4x3BSK6O0SxPWhrHcY3djEbF5rThGhJvt-cfWfLA\"></div>";
+}
+
+function change2()
+{
+document.getElementById("m").innerHTML="Funcity offers a truly memorable experience for families looking to spend quality time together.<br>Funcity also houses an exclusive birthday party hall and offers the best birthday party ever for parents and kids looking to have an out-of-home party experience.<br><div><img src=\"https://encrypted-tbn2.gstatic.com/images?q=tbn:ANd9GcTuq4G7maweSZ-q-X4tQ2bwdHUZNRZ73s_DIEJrVnhJXvcRZmFO\"></div><div><img src=\"https://encrypted-tbn3.gstatic.com/images?q=tbn:ANd9GcSlVn1bPAGG0dk1v6o-OD2k7U2hN5EjHbilNvCGax7_7cZ2o9cScw\"></div>";
+}
+
+function ori()
+{
+document.getElementById("m").innerHTML="<p>Login to book your show.<br>There are 6 screens.<br>Free 3D goggles will be provided for 3D movies.<br><ol>Movies running now:<li>Singam II<li>World WarZ<li>Bhaag Milkha Bhaag<li>Raanjhanaa<li>Hangover Part III<li>The Iceman</ol></p>";
+}
+</script>
+</body>
+
+</html>

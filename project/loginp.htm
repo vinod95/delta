@@ -1,0 +1,213 @@
+
+<html>
+<style>
+
+MARQUEE{
+font-size:90px;
+color:Black;
+}
+
+body 
+{
+background-color:DarkOrange;
+border:1px solid black;
+} 
+form{
+border-style:groove;
+border-width:thick;
+background-color:LightBlue;
+border-color:black;
+color:red;
+margin-top:5mm;
+margin-left:.5mm;
+margin-right:5mm;
+margin-bottom:5mm;
+}
+</style>
+<body>
+
+<MARQUEE behavior="alternate" height="15%">MyCinemas</MARQUEE>
+
+<form  action="http://localhost/register.php" id="Frm" name="myForms" method="post" onSubmit="return validate()">
+
+First Name * : <input type="text" name="fName"></input><br><br>
+
+Last Name * : <input type="text" name="lName"></input><br><br>
+
+Username * : <input type="text" name="uName"></input><br><br>
+
+Gender : <input type="radio" name="Gender" value="Male" checked="checked">Male</input>
+<input type="radio" name="Gender" value="Female">Female</input><br><br>
+
+
+Residential address : <input type="text" name="Residential"></input><br><br>
+
+Mobile no * : <input type="number" name="phNo"></input><br><br>
+
+Password * : <input type="password" name="pwd"><br><br>
+Retype Password * : <input type="password" name="rpwd"><br><br>
+
+<br><br><input type="submit" name="submit1">
+
+</form>
+
+<script>
+
+var i=0;
+
+function val1()
+{
+var x=document.forms["myForms"]["fName"].value;
+if (x==null || x=="")
+  {
+  confirm("First Name must be filled out");
+  i++;
+  }
+}
+function val2()
+{
+var x=document.forms["myForms"]["lName"].value;
+if (x==null || x=="")
+  {
+  confirm("Last Name must be filled out");
+  i++;
+  }
+}
+function val13()
+{
+var x=document.forms["myForms"]["uName"].value;
+if (x==null || x=="")
+  {
+  confirm("Username must be filled out");
+  i++;
+  }
+}
+
+function val3()
+{
+
+var x=document.forms["myForms"]["phNo"].value;
+if (x==null || x=="")
+  {
+  confirm("Phone number must be filled out");
+  i++;}
+}
+
+
+function val4()
+{
+var x=document.forms["myForms"]["pwd"].value;
+if (x==null || x=="")
+  {
+  confirm("Password must be filled out");
+  i++;}
+}
+function val5()
+{
+var x=document.forms["myForms"]["rpwd"].value;
+if (x==null || x=="") 
+  {
+  confirm("Re-Password must be filled out");
+  i++;}
+}
+
+function val12()
+{
+var x=document.forms["myForms"]["fName"].value; 
+var letters = /^[a-zA-Z. ]+$/;  
+if(!x.match(letters))  
+{  
+confirm('First name must have alphabet characters only');     
+i++;}  
+}
+
+
+function val6()
+{
+var x=document.forms["myForms"]["lName"].value; 
+var letters = /^[a-zA-Z. ]+$/;  
+if(!x.match(letters))  
+{  
+confirm('Last name must have alphabet characters only');     
+i++;}  
+}
+
+
+function val7()
+{
+var x=document.forms["myForms"]["uName"].value; 
+var letters = /^[a-zA-Z0-9._ ]+$/;  
+if(!x.match(letters))  
+{  
+confirm('Username cannot have special characters except .[dot] and _[underscore]');     
+i++;}  
+}
+
+function val8()
+{
+var x=document.forms["myForms"]["pwd"].value; 
+var letters = /^[A-Za-z0-9_]+$/;  
+if(!x.match(letters))  
+{  
+confirm('password must have alphabet, digits and underscores only');     
+i++;}  
+}
+
+function val9()
+{
+var x=document.forms["myForms"]["pwd"].value;
+if (x.length<6 || x.length>12)
+  {
+  confirm("password should be 6-12 characters long.");
+  i++;}
+}
+
+
+function val10()
+{
+var x=document.forms["myForms"]["phNo"].value;
+if (x.length!==10)
+  {
+  i++;
+  confirm("Not a valid mobile number.");
+  }
+}
+
+
+function val11()
+{
+var x=document.forms["myForms"]["pwd"].value;
+var y=document.forms["myForms"]["rpwd"].value;
+if (x!==y)
+  {
+  i++; 
+  confirm("Re-password should be same as password");
+  }
+}
+
+function validate()
+{
+val1();
+val2();
+val13();
+val3();
+val4();
+val5();
+val12();
+val6();
+val7();
+val8();
+val9();
+val10();
+val11();
+if(i!=0)
+ {
+  i=0;
+  return false;
+ }
+}
+
+
+</script>
+</body>
+</html>
